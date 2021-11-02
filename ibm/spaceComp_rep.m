@@ -72,7 +72,7 @@ for i=1:maxI
 	else	% Death
 		n(pi+1)=n(pi+1)-1;
 		if n(pi+1)==0
-			out(1,[5 6]=[pi tnxt];
+			out(1,[5 6])=[pi tnxt];
 		end
 		x(j1,:)=NaN(1,5);
 		xi=j1;

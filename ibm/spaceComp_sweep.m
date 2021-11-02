@@ -12,7 +12,7 @@ fName=importdata(sprintf('./output/%s/parFiles/sweep.txt',id));
 runs=length(fName);
 
 %% Output
-out=NaN(runs-1,22);
+out=NaN(runs-1,26);
 
 wSweep=waitbar(0,'Sweep progress');
 
@@ -25,7 +25,7 @@ for iRun=1:runs-1
 	run=str2double(regexp(fName{iRun},'[0-9][0-9][0-9][0-9]','match'));
 	fprintf('Starting run%04d...\n',run);
 	run_out=spaceComp_run(id,run,rep);
-	out(iRun,15:22)=[run_out(1,:) run_out(2,:)];
+	out(iRun,15:26)=[run_out(1,:) run_out(2,:)];
 	waitbar(iRun/runs,wSweep);
 end
 toc
