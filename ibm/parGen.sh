@@ -24,7 +24,7 @@ cd ${dir}/parFiles
 
 # Create full factorial list of parameter files based on the following ranges
 l=20
-r1=2
+r1=(0.5 2)
 r2=1
 b1=0.5
 b2=0.5
@@ -76,7 +76,7 @@ do
 									echo -e "n1 \t\t\t 10 \t \"Initial population of first species\"" >> $f
 									echo -e "n2 \t\t\t 10 \t \" \t second \t \"" >> $f
 									echo -e "\n\"Methods parameters\" \t \"\" \t \"\"" >> $f
-									echo -e "T  \t\t\t 1e3 \t \"Total time\"" >> $f
+									echo -e "T  \t\t\t 1e1 \t \"Total time\"" >> $f
 									echo -e "maxIter \t\t 1e6 \t \"Total iterations\"" >> $f
 								done
 							done
