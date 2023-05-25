@@ -68,12 +68,12 @@ else
 end
 
 % Visualization initiation
-fig=figure('Position',[500 450 1120 420]);
+fig=figure('Position',[500 450 1120 420],'Visible','off');
 subplot(1,2,1);
 ax1=gca;
 hold(ax1,'on');
 plotCir(ax1,[0 0],l);
-title(ax1,'Space competition simulation','Fontsize',15);
+%title(ax1,'Space competition simulation','Fontsize',15);
 %annotation('textbox',[0.01 0.1 0.095 0.8],'String',parAnn,'Fontsize',10);
 
 subplot(1,2,2);
@@ -162,6 +162,9 @@ for i=1:maxI
 	if t>T
 		fprintf('Maximum time reached\n');
 		break;
+	end
+	if i==1 || mod(i,100)==0
+		printPdf(fig,sprintf('./output/%s/snap_%d',id,i));
 	end
 	waitbar(max(i/maxI,t/T),wbar);
 end

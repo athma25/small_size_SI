@@ -27,3 +27,4 @@ MATLAB codes to simulate and numerically solve the models in the manuscript "Sma
 
 ## Other notes
 * .gitignore file lets you ignore everything under the output subdirectories to save space on the repo
+* *printPdf.m* and *myTxtFmt.m* are custom MATLAB scripts to print plot as PDF and change font size and interpreter
